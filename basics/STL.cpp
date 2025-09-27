@@ -33,7 +33,6 @@ using namespace std;
     - A pair stores 2 values (possibly of different types) together.
     - Elements are accessed as .first and .second. */
 
- 
         // void testPair() {
         //     pair<int,int> p = {1, 3};
         //     cout << p.first << " " << p.second;
@@ -45,9 +44,34 @@ using namespace std;
         //     cout << arr[1].second;
         // }
 
-        // int main() {
-        //     testPair();
-        //     return 0;
+        void explainVector(){
+            // vector<int>num ;
+            // num.push_back(1);
+            // num.emplace_back(2);
+            // cout<<num[0]<<" "<<num[1]<<endl;
+
+            // vector<pair<int,int>>num2;
+            // num2.push_back({1,2});
+            // num2.emplace_back(3,4);
+            // cout<<num2[0].first<<" "<<num2[1].second<<endl;// 0 first means 2 and 1 second means 4
+
+            // vector<int>num3(5,100);
+            // for(int i=0 ;i<num3.size();i++){
+            //     cout<<num3[i]<<" " ;
+            // }
+            // vector<int>num4(5);
+        //     vector<int>num5(5,20);
+        //     vector<int>num6(num5);// make copy of num 5 as num6
+        //     for(int i=0 ;i<num6.size();i++){
+        //         cout<<num6[i]<<" " ;
+        //     }
+
+        // }
+        // int main(){
+        //     // testPair() ;
+        //     explainVector();
+        //     return 0 ;
+
         // }
 /*----------------------------------------------------------------------------------------------------*/
 
@@ -195,10 +219,29 @@ using namespace std;
         //     cout << "Size of the set after clearing: " << s.size();
         // }
 /*----------------------------------------------------------------------------------------------------*/
+/*
+ALGORITHMS - STL
+
+    - Functions for operations on containers (like sorting, searching, etc.).except map
+    - Operate on ranges defined by iterators.
+
+    Example: sort, binary_search, reverse, etc. */
+
+        // int main() {
+        //     vector<int> v = {4, 3, 2, 1, 5};
+        //     sort(v.begin(), v.end()); // Sorts the vector in ascending order
+
+
+// int a[] = {4,3,2,1,5};
+// int n = sizeof(a)/sizeof(a[0]);
+// void descendingSorting() 
+// {
+//     sort(a, a + n, greater<int>());
+// }
+     
 
 /*
 ====================================================================================================================
-                                               THE END 
+                                               THE END.
 ====================================================================================================================
 */
-
