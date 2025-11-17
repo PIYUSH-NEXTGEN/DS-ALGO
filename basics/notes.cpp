@@ -350,6 +350,93 @@ Done - you have one object in vector
         sort(v.begin(), v.end());    // {1,1,3,4,5}
         reverse(v.begin(), v.end()); // {5,4,3,1,1}
 ---------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------------
+    Recursion
+----------------------------------------------------------------------------------------------------
+    - Recursion is when a function calls itself to solve a smaller part of the same problem.
+    - A recursive function ALWAYS has:
+        1. Base case   -> Where the recursion stops.
+        2. Recursive step -> The function calling itself with smaller input.
+
+    Why recursion?
+        - Useful for problems that naturally break into subproblems:
+            * Tree traversal
+            * Graph traversal (DFS)
+            * Divide & Conquer algorithms (merge sort, quick sort)
+            * Mathematical definitions (factorial, Fibonacci)
+
+    Risks:
+        - Too deep recursion => stack overflow
+        - Slow if repeated subproblems occur (Fibonacci without memoization)
+
+    Syntax pattern:
+        return_type function_name(params) {
+            if (base_case_condition)
+                return value;
+
+            // smaller subproblem
+            return function_name(smaller_params);
+        }
+
+    Example: Factorial
+        int fact(int n) {
+            if (n == 0) return 1;     // base case
+            return n * fact(n - 1);   // recursive step
+        }
+
+    Example: Sum of array
+        int sum(int arr[], int i) {
+            if (i < 0) return 0;
+            return arr[i] + sum(arr, i - 1);
+        }
+---------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------------------------------------------------------------------------
+    Hashing
+----------------------------------------------------------------------------------------------------
+    - Hashing converts a key (string, int, etc.) into a fixed-size integer (hash value).
+    - This integer decides where the key is stored in a hash table.
+    - Goal: FAST insertion, search, deletion. Average time: O(1).
+
+    Key concepts:
+      1) Hash Function
+            - Converts key -> integer
+            - Good hash function spreads keys uniformly.
+      2) Collision
+            - When two different keys get same hash value.
+      3) Collision Handling:
+            a) Chaining
+               - Each hash index stores a linked list/vector of keys.
+               - unordered_map and unordered_set use this.
+            b) Open addressing
+               - Find another empty place (linear probing, quadratic probing).
+
+    Where you use hashing:
+        - unordered_map, unordered_set
+        - Compiler symbol table
+        - Databases, caches
+        - Password storage (with cryptographic hash)
+
+    Example of hashing (conceptually):
+        key = "Piyush"
+        hash = (sum of ASCII characters) % table_size
+
+    Example using unordered_map (hash table):
+        unordered_map<string, int> mp;
+        mp["Math"] = 95;   // stored based on hash of "Math"
+        mp["CS"] = 99;
+        cout << mp["CS"];  // average O(1) lookup
+
+    Example using unordered_set:
+        unordered_set<int> st;
+        st.insert(5);
+        st.insert(10);
+        st.insert(5);  // ignored (duplicate)
+---------------------------------------------------------------------------------------------------- */
+
+
+
 /*
 ====================================================================================================================
                                                 END OF NOTES
